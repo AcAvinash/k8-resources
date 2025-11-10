@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: namespace #type of resources
+metadata:
+  name: expense #name of the resources
+
+  # namespace is like a project within the namespace we provision the resources
+
+  # mein thoda basic syntax likhta hun thoda tum btana
