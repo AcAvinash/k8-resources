@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: my-pod
-  namespace: my-namespace
+  namespace: expense
 spec:
  containers:
   - name: my-container
