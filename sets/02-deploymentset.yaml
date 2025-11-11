@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels: # these labels are replica set labels, every k8 resource can have labels.
+    app: nginx
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels: # these labels should match with pod labels
+      app: nginx
+      project: expense
+      component: frontend
+  template: # this one is nothing but pod definition.
+    metadata:
+      labels: #these are the pod labels.
+        project: expense
+        app: nginx
+        component: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
